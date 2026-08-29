@@ -12,19 +12,18 @@ Hi 👋 I'm Abhishek<br>🎓 Computer Science Student<br>💻 Passionate about S
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=abhisheknj37">
+<img src="https://github-readme-stats.vercel.app/api?username=abhisheknj37&show_icons=true&theme=dark&hide_border=true&title_color=70A5FD&icon_color=BF7AF0&text_color=2ED9C3&bg_color=1B1D2A">
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abhisheknj37&layout=compact&theme=dark&hide_border=true&title_color=70A5FD&text_color=2ED9C3&bg_color=1B1D2A" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abhisheknj37&layout=compact&theme=dark&hide_border=true&title_color=70A5FD&text_color=2ED9C3&bg_color=1B1D2A">
 
-<br>
+<br><br>
 
-<img src="https://streak-stats.demolab.com/?user=abhisheknj37&theme=dark&hide_border=true&background=1B1D2A&ring=70A5FD&fire=70A5FD&currStreakLabel=BF7AF0&sideLabels=70A5FD&dates=2ED9C3" />
+<img src="https://streak-stats.demolab.com/?user=abhisheknj37&theme=dark&hide_border=true&background=1B1D2A&ring=70A5FD&fire=70A5FD&currStreakLabel=BF7AF0&sideLabels=70A5FD&dates=2ED9C3">
 
 </div>
 ## 🏆 GitHub Trophies
 
 <img src="https://github-profile-trophy.vercel.app/?username=abhisheknj37&theme=radical&no-frame=true&no-bg=true&column=7" />
-
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
