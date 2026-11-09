@@ -1,107 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0b1020" />
-  <meta name="description" content="Abhishek N J — Computer Science student building AI-powered applications and software." />
-  <title>Abhishek N J | Developer Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Abhishek N J — Computer Science student and developer building AI-powered applications and useful software.">
+  <title>Abhishek N J — Developer Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <header class="nav-wrap">
-    <nav class="nav container">
-      <a class="brand" href="#home"><span class="brand-mark">A<span>.</span></span><span>abhishek<span class="muted">.dev</span></span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
-        <a class="nav-cta" href="https://github.com/abhisheknj37" target="_blank" rel="noreferrer">GitHub ↗</a>
+<header class="site-header">
+  <nav class="nav container">
+    <a class="avatar-link" href="#home" aria-label="Home"><img src="https://github.com/abhisheknj37.png" alt="Abhishek GitHub profile picture"></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#contact">Contacts</a>
+    </div>
+    <div class="social-links">
+      <a href="https://github.com/abhisheknj37" target="_blank" rel="noreferrer" aria-label="GitHub">GH</a>
+      <a href="https://www.linkedin.com/in/abhishek-n-j-4918b7273/" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+      <a href="mailto:abhisheknj37@gmail.com" aria-label="Email">✉</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="hero container" id="home">
+    <div class="hero-copy">
+      <div class="availability"><span></span> COMPUTER SCIENCE STUDENT · DEVELOPER</div>
+      <h1>Crafting Intelligent<br>Software, Creating<br><em>Real Impact</em><span class="sparkle">✦</span></h1>
+      <p class="intro"><strong>Developer</strong> exploring AI, machine learning and full-stack development — building practical applications with clean code, curiosity and purpose.</p>
+      <form class="connect-form" id="connectForm">
+        <label class="sr-only" for="emailInput">Your email address</label>
+        <input id="emailInput" type="email" placeholder="Your email address" required>
+        <button type="submit">Connect <span>↗</span></button>
+      </form>
+      <p class="form-note" id="formNote">Have an idea or opportunity? Let's connect.</p>
+    </div>
+    <div class="portrait-wrap">
+      <img class="portrait" src="https://github.com/abhisheknj37.png" alt="Abhishek N J profile portrait">
+      <div class="portrait-caption"><span>BUILD · LEARN · REPEAT</span><b>Abhishek N J</b><small>Developer / India</small></div>
+    </div>
+  </section>
+
+  <section class="intro-strip container" id="about">
+    <span class="section-kicker">01 / ABOUT ME</span>
+    <div><h2>Curious by nature.<br><span>Driven to build.</span></h2><p>I'm a Computer Science student interested in turning ideas into useful technology. My work explores AI assistants, computer vision, intelligent agriculture and full-stack applications. I learn best by building, testing and improving real projects.</p><a class="inline-link" href="https://github.com/abhisheknj37" target="_blank" rel="noreferrer">Explore my GitHub profile ↗</a></div>
+  </section>
+
+  <section class="services-section" id="services">
+    <div class="container">
+      <span class="section-kicker">02 / WHAT I WORK WITH</span>
+      <div class="section-title-row"><h2>Skills & services</h2><p>Tools and technologies reflected in my public profile and project work.</p></div>
+      <div class="service-grid">
+        <article class="service-card"><span class="service-number">01</span><div class="service-icon">⌘</div><h3>Software Development</h3><p>Building applications and backend services with an emphasis on readable code and useful features.</p><div class="pills"><span>Python</span><span>Java</span><span>Flask</span><span>Django</span></div></article>
+        <article class="service-card"><span class="service-number">02</span><div class="service-icon">✳</div><h3>AI & Machine Learning</h3><p>Exploring intelligent systems, model-driven applications and computer vision workflows.</p><div class="pills"><span>TensorFlow</span><span>OpenCV</span><span>ML</span><span>NumPy</span></div></article>
+        <article class="service-card"><span class="service-number">03</span><div class="service-icon">◫</div><h3>Web Development</h3><p>Creating responsive web experiences and connecting frontend interfaces with APIs.</p><div class="pills"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>FastAPI</span></div></article>
+        <article class="service-card"><span class="service-number">04</span><div class="service-icon">▤</div><h3>Data & Cloud</h3><p>Working with databases, data tools and cloud platforms as part of end-to-end projects.</p><div class="pills"><span>MySQL</span><span>SQLite</span><span>MongoDB</span><span>AWS</span><span>Google Cloud</span></div></article>
       </div>
-    </nav>
-  </header>
+    </div>
+  </section>
 
-  <main>
-    <section class="hero container" id="home">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse"></span> COMPUTER SCIENCE STUDENT · DEVELOPER</div>
-        <h1>Building useful things<br>with <span class="gradient-text">code & curiosity.</span></h1>
-        <p class="hero-intro">Hi, I'm <strong>Abhishek N J</strong>. I explore the intersection of software development, machine learning and AI — turning ideas into practical applications.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">Explore my work <span>↗</span></a>
-          <a class="button secondary" href="mailto:abhisheknj37@gmail.com">Get in touch</a>
-        </div>
-        <div class="hero-meta"><span>📍 India</span><span>✳ Open to learning & opportunities</span></div>
-      </div>
-      <div class="hero-card">
-        <div class="card-top"><span class="window-dots"><i></i><i></i><i></i></span><span>developer.js</span><span>⌘</span></div>
-        <div class="code-block">
-          <p><span class="line-no">01</span><span class="code-purple">const</span> developer = {</p>
-          <p><span class="line-no">02</span>&nbsp; name: <span class="code-green">'Abhishek N J'</span>,</p>
-          <p><span class="line-no">03</span>&nbsp; focus: [</p>
-          <p><span class="line-no">04</span>&nbsp;&nbsp; <span class="code-green">'Artificial Intelligence'</span>,</p>
-          <p><span class="line-no">05</span>&nbsp;&nbsp; <span class="code-green">'Software Development'</span>,</p>
-          <p><span class="line-no">06</span>&nbsp;&nbsp; <span class="code-green">'Machine Learning'</span></p>
-          <p><span class="line-no">07</span>&nbsp; ],</p>
-          <p><span class="line-no">08</span>&nbsp; mindset: <span class="code-green">'Always learning'</span>,</p>
-          <p><span class="line-no">09</span>&nbsp; build: () =&gt; <span class="code-blue">'Make it useful.'</span></p>
-          <p><span class="line-no">10</span>};</p>
-        </div>
-        <div class="card-bottom"><span class="status-dot"></span> Available for collaboration</div>
-        <div class="float-chip chip-one">✦ AI & ML</div><div class="float-chip chip-two">⌘ Python</div>
-      </div>
-    </section>
+  <section class="projects-section container" id="projects">
+    <span class="section-kicker">03 / SELECTED PROJECTS</span>
+    <div class="section-title-row"><h2>Ideas turned into<br><span>working projects.</span></h2><a class="inline-link" href="https://github.com/abhisheknj37?tab=repositories" target="_blank" rel="noreferrer">View all repositories ↗</a></div>
+    <div class="project-grid">
+      <article class="project-card"><div class="project-visual visual-sign"><span>手</span><small>COMPUTER VISION</small></div><div class="project-info"><span class="project-index">01 / ACCESSIBILITY</span><h3>Sign Language to Text</h3><p>Webcam-based hand-sign recognition that translates gestures into readable text using a trained CNN model.</p><div class="pills"><span>Python</span><span>OpenCV</span><span>TensorFlow</span></div><a href="https://github.com/abhisheknj37/sign-to-text-translator" target="_blank" rel="noreferrer">View project ↗</a></div></article>
+      <article class="project-card"><div class="project-visual visual-fraud"><span>◉</span><small>AI / FINTECH</small></div><div class="project-info"><span class="project-index">02 / MULTI-AGENT AI</span><h3>Financial Crime Sentinel</h3><p>A fraud investigation copilot combining multi-agent analysis, risk scoring and case review workflows.</p><div class="pills"><span>React</span><span>FastAPI</span><span>PostgreSQL</span></div><a href="https://github.com/abhisheknj37/Multi-Agent-Fraud-Investigation-Copilot" target="_blank" rel="noreferrer">View project ↗</a></div></article>
+      <article class="project-card"><div class="project-visual visual-agri"><span>✳</span><small>AI / AGRICULTURE</small></div><div class="project-info"><span class="project-index">03 / MACHINE LEARNING</span><h3>AgriVoice AI Assistant</h3><p>A farming assistant featuring crop prediction, agricultural guidance, weather information and voice interaction.</p><div class="pills"><span>Django</span><span>React</span><span>ML</span></div><a href="https://github.com/abhisheknj37/AgriVoice-Ai-assistent" target="_blank" rel="noreferrer">View project ↗</a></div></article>
+      <article class="project-card"><div class="project-visual visual-media"><span>▧</span><small>GENERATIVE AI</small></div><div class="project-info"><span class="project-index">04 / CREATIVE TOOLS</span><h3>AI Media Generator</h3><p>Generates stories, scene images, narrated audio and compiled video using AI-powered services.</p><div class="pills"><span>Python</span><span>OpenAI</span><span>MoviePy</span></div><a href="https://github.com/abhisheknj37/AI-Media-Generator" target="_blank" rel="noreferrer">View project ↗</a></div></article>
+      <article class="project-card"><div class="project-visual visual-jarvis"><span>⌁</span><small>VOICE / AUTOMATION</small></div><div class="project-info"><span class="project-index">05 / PERSONAL ASSISTANT</span><h3>JARVIS AI Assistant</h3><p>A Python desktop assistant with voice interaction, AI conversations, utilities and automation features.</p><div class="pills"><span>Python</span><span>Speech</span><span>Automation</span></div><a href="https://github.com/abhisheknj37/jarvis-ai-assistant-main" target="_blank" rel="noreferrer">View project ↗</a></div></article>
+      <article class="project-card"><div class="project-visual visual-bank"><span>▣</span><small>WEB / DATABASE</small></div><div class="project-info"><span class="project-index">06 / FULL STACK</span><h3>Banking System</h3><p>A Flask and SQLite banking application with role-based access, accounts and transaction management.</p><div class="pills"><span>Python</span><span>Flask</span><span>SQLite</span></div><a href="https://github.com/abhisheknj37/banking_system_database-mini-project" target="_blank" rel="noreferrer">View project ↗</a></div></article>
+    </div>
+  </section>
 
-    <section class="ticker"><div class="ticker-track"><span>PYTHON</span><b>✳</b><span>MACHINE LEARNING</span><b>✳</b><span>REACT</span><b>✳</b><span>DJANGO</span><b>✳</b><span>COMPUTER VISION</span><b>✳</b><span>FASTAPI</span><b>✳</b><span>PYTHON</span><b>✳</b><span>MACHINE LEARNING</span></div></section>
-
-    <section class="section container" id="about">
-      <div class="section-label">01 / ABOUT ME</div>
-      <div class="about-grid">
-        <div><h2>Curious mind.<br><span class="muted-heading">Practical builder.</span></h2></div>
-        <div class="about-text"><p>I'm a Computer Science student passionate about creating technology that solves real problems. My GitHub work spans AI assistants, computer vision, intelligent farming tools and full-stack applications.</p><p>I enjoy learning by building — experimenting with new tools, connecting frontend and backend systems, and improving ideas through iteration.</p><a class="text-link" href="https://github.com/abhisheknj37" target="_blank" rel="noreferrer">Explore my GitHub profile <span>↗</span></a></div>
-      </div>
-    </section>
-
-    <section class="section container" id="skills">
-      <div class="section-label">02 / TOOLKIT</div>
-      <div class="section-heading"><h2>Technologies I work with</h2><p>Based on the languages, tools and frameworks listed across my public GitHub profile and project documentation.</p></div>
-      <div class="skills-grid">
-        <article class="skill-card"><div class="skill-icon">⌘</div><h3>Languages</h3><div class="tags"><span>Python</span><span>Java</span><span>JavaScript</span><span>C</span><span>C++</span><span>HTML</span><span>CSS</span></div></article>
-        <article class="skill-card"><div class="skill-icon">◈</div><h3>AI & Data</h3><div class="tags"><span>Machine Learning</span><span>TensorFlow</span><span>OpenCV</span><span>NumPy</span><span>Pandas</span><span>Computer Vision</span></div></article>
-        <article class="skill-card"><div class="skill-icon">⌘</div><h3>Web & Backend</h3><div class="tags"><span>React</span><span>Django</span><span>Flask</span><span>FastAPI</span><span>Django REST</span></div></article>
-        <article class="skill-card"><div class="skill-icon">▤</div><h3>Cloud & Databases</h3><div class="tags"><span>AWS</span><span>Google Cloud</span><span>MySQL</span><span>MongoDB</span><span>SQLite</span><span>Docker</span></div></article>
-      </div>
-    </section>
-
-    <section class="section projects-section" id="projects">
-      <div class="container">
-        <div class="section-label">03 / SELECTED WORK</div>
-        <div class="section-heading projects-heading"><div><h2>Things I've built.</h2><p>A selection of projects from my public repositories.</p></div><a class="text-link" href="https://github.com/abhisheknj37?tab=repositories" target="_blank" rel="noreferrer">All repositories ↗</a></div>
-        <div class="projects-grid">
-          <article class="project-card featured"><div class="project-art art-sign"><span class="art-symbol">手</span><span class="art-caption">VISION / ACCESSIBILITY</span></div><div class="project-content"><div class="project-type">01 — COMPUTER VISION</div><h3>Sign Language to Text</h3><p>A gesture-recognition system that uses webcam input and a trained CNN model to translate hand signs into readable text.</p><div class="tags"><span>Python</span><span>OpenCV</span><span>TensorFlow</span><span>CNN</span></div><a href="https://github.com/abhisheknj37/sign-to-text-translator" target="_blank" rel="noreferrer">View repository ↗</a></div></article>
-          <article class="project-card"><div class="project-art art-fraud"><span class="art-symbol">◉</span><span class="art-caption">MULTI-AGENT / FINTECH</span></div><div class="project-content"><div class="project-type">02 — AI & FULL STACK</div><h3>AI Financial Crime Sentinel</h3><p>A fraud investigation platform combining multi-agent analysis, risk scoring, network intelligence and human-reviewed case decisions.</p><div class="tags"><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span></div><a href="https://github.com/abhisheknj37/Multi-Agent-Fraud-Investigation-Copilot" target="_blank" rel="noreferrer">View repository ↗</a></div></article>
-          <article class="project-card"><div class="project-art art-agri"><span class="art-symbol">✳</span><span class="art-caption">AI / AGRICULTURE</span></div><div class="project-content"><div class="project-type">03 — MACHINE LEARNING</div><h3>AgriVoice</h3><p>An AI-powered farming assistant with crop prediction, farming recommendations, weather information and voice interaction.</p><div class="tags"><span>Django</span><span>React</span><span>Scikit-learn</span><span>AI</span></div><a href="https://github.com/abhisheknj37/AgriVoice-Ai-assistent" target="_blank" rel="noreferrer">View repository ↗</a></div></article>
-          <article class="project-card"><div class="project-art art-media"><span class="art-symbol">▧</span><span class="art-caption">GENERATIVE AI / MEDIA</span></div><div class="project-content"><div class="project-type">04 — GENERATIVE AI</div><h3>AI Media Generator</h3><p>Transforms prompts into stories, scene images, narrated audio and a compiled video using generative AI services.</p><div class="tags"><span>Python</span><span>OpenAI</span><span>Google Cloud TTS</span><span>MoviePy</span></div><a href="https://github.com/abhisheknj37/AI-Media-Generator" target="_blank" rel="noreferrer">View repository ↗</a></div></article>
-          <article class="project-card"><div class="project-art art-jarvis"><span class="art-symbol">⌁</span><span class="art-caption">VOICE / AUTOMATION</span></div><div class="project-content"><div class="project-type">05 — AI ASSISTANT</div><h3>JARVIS AI Assistant</h3><p>A modular desktop assistant featuring voice interaction, AI conversations, system utilities and automation workflows.</p><div class="tags"><span>Python</span><span>Speech</span><span>Automation</span><span>OpenCV</span></div><a href="https://github.com/abhisheknj37/jarvis-ai-assistant-main" target="_blank" rel="noreferrer">View repository ↗</a></div></article>
-          <article class="project-card"><div class="project-art art-bank"><span class="art-symbol">▣</span><span class="art-caption">WEB APP / DATABASE</span></div><div class="project-content"><div class="project-type">06 — FULL STACK</div><h3>Smart Banking System</h3><p>A Flask banking application with role-based access, account management, transfers, loans and transaction history.</p><div class="tags"><span>Python</span><span>Flask</span><span>SQLite</span><span>HTML/CSS</span></div><a href="https://github.com/abhisheknj37/banking_system_database-mini-project" target="_blank" rel="noreferrer">View repository ↗</a></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="journey">
-      <div class="section-label">04 / CURRENT FOCUS</div>
-      <div class="journey-panel"><div><h2>Learning by building.</h2><p>Currently exploring Django and AI projects, strengthening software development fundamentals and building applications that connect intelligent systems with useful experiences.</p></div><div class="journey-badge"><span class="status-dot"></span> Always learning, always building</div></div>
-    </section>
-
-    <section class="section container contact-section" id="contact">
-      <div class="section-label">05 / CONTACT</div>
-      <div class="contact-box"><div><div class="eyebrow">HAVE AN IDEA OR OPPORTUNITY?</div><h2>Let's build something<br><span class="gradient-text">meaningful.</span></h2><p>I'm happy to connect, collaborate and learn with other builders.</p></div><div class="contact-links"><a href="mailto:abhisheknj37@gmail.com"><span>✉</span> abhisheknj37@gmail.com <b>↗</b></a><a href="https://www.linkedin.com/in/abhishek-n-j-4918b7273/" target="_blank" rel="noreferrer"><span>in</span> LinkedIn <b>↗</b></a><a href="https://github.com/abhisheknj37" target="_blank" rel="noreferrer"><span>⌘</span> GitHub <b>↗</b></a></div></div>
-    </section>
-  </main>
-  <footer class="footer container"><a class="brand" href="#home"><span class="brand-mark">A<span>.</span></span><span>abhishek<span class="muted">.dev</span></span></a><span>Designed & built with curiosity · © <span id="year"></span> Abhishek N J</span><a href="#home">Back to top ↑</a></footer>
-  <script src="script.js"></script>
+  <section class="contact-section" id="contact"><div class="container contact-inner"><span class="section-kicker">04 / CONTACT</span><h2>Let's create something<br><em>impactful together.</em></h2><p>Open to connecting with developers, collaborators and teams working on meaningful ideas.</p><a class="contact-button" href="mailto:abhisheknj37@gmail.com">abhisheknj37@gmail.com <span>↗</span></a><div class="contact-socials"><a href="https://github.com/abhisheknj37" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/abhishek-n-j-4918b7273/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div></section>
+</main>
+<footer class="footer container"><a class="avatar-link small-avatar" href="#home"><img src="https://github.com/abhisheknj37.png" alt=""></a><span>Designed & built by Abhishek N J · <span id="year"></span></span><a href="#home">Back to top ↑</a></footer>
+<script src="script.js"></script>
 </body>
 </html>
