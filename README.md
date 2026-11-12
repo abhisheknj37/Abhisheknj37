@@ -4,6 +4,18 @@
 Hi 👋 I'm Abhishek<br>🎓 Computer Science Student<br>💻 Passionate about Software Development and Machine Learning<br>🚀 Currently working on Django and AI projects<br><br>🔭 Current Project<br>Neurosign: A Bidirectional Neural Network for Sign-to-Speech and Speech-to-Sign Translation<br><br>🛠 Skills<br>Python<br>Django<br>Machine Learning<br>HTML, CSS<br>Git & GitHub<br>📫 Contact<br>Email: abhisheknj37@gmail.com LinkedIn: [abhishek-n-j]<br><br>⚡ Fun Fact<br>I love building AI based projects and learning new technologies.# README.md
 
 
+## 🚀 Featured Projects
+
+### 🏋️ FitAI – AI-Powered Health & Fitness Platform
+A full-stack health and fitness web application with a personalized dashboard and tools to explore workout planning, nutrition, activity tracking, and health insights.
+
+- **Features:** Health profile, fitness dashboard, workout plans, nutrition tracking, activity monitoring, health reports, community features, and an AI health-assistant demo.
+- **Tech Stack:** React 19, Vite, Node.js, Express.js, Tailwind CSS, Recharts.
+- **Live Demo:** [https://fitai-platform.onrender.com](https://fitai-platform.onrender.com)
+- **Source Code:** [abhisheknj37/fitai-app](https://github.com/abhisheknj37/fitai-app)
+
+> **Project note:** The AI chat, food-image analysis, and SOS flows are demo simulations, not clinical services or live emergency dispatch.
+
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/https://www.instagram.com/abhi__n07?igsh=enIyaDR1ZnZyMnR4) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/abhishek-n-j-4918b7273/) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:abhisheknj37@gmail.com) 
 
