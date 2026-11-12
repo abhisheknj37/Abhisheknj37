@@ -1,13 +1,29 @@
-const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
-menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
-document.getElementById('year').textContent = new Date().getFullYear();
-
-document.getElementById('connectForm').addEventListener('submit', event => {
-  event.preventDefault();
-  const email = document.getElementById('emailInput').value.trim();
-  const subject = encodeURIComponent('Portfolio connection');
-  const body = encodeURIComponent('Hi Abhishek,\n\nPlease connect with me at: ' + email);
-  window.location.href = 'mailto:abhisheknj37@gmail.com?subject=' + subject + '&body=' + body;
-});
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+const root=document.documentElement;
+$('#year').textContent=new Date().getFullYear();
+const savedTheme=localStorage.getItem('portfolio-theme');if(savedTheme)root.dataset.theme=savedTheme;
+$('#themeToggle').textContent=root.dataset.theme==='dark'?'☼':'☾';
+$('#themeToggle').addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';localStorage.setItem('portfolio-theme',root.dataset.theme);$('#themeToggle').textContent=root.dataset.theme==='dark'?'☼':'☾';});
+$('#menuToggle').addEventListener('click',()=>$('#navLinks').classList.toggle('open'));
+$$('#navLinks a').forEach(a=>a.addEventListener('click',()=>$('#navLinks').classList.remove('open')));
+$('#resumeButton').addEventListener('click',()=>window.print());
+const roles=['intelligent applications.','AI-powered experiences.','useful things for the web.','ideas that solve problems.'];let role=0,pos=0,deleting=false;
+function type(){const el=$('#typedRole'),word=roles[role];pos+=deleting?-1:1;el.textContent=word.slice(0,pos);let delay=deleting?35:65;if(!deleting&&pos===word.length){deleting=true;delay=1450}else if(deleting&&pos===0){deleting=false;role=(role+1)%roles.length;delay=300}setTimeout(type,delay)}type();
+// Canvas particle field: light, responsive and pointer-reactive.
+const canvas=$('#particles'),ctx=canvas.getContext('2d');let dots=[],mouse={x:-1000,y:-1000};
+function resize(){const dpr=Math.min(devicePixelRatio||1,2);canvas.width=innerWidth*dpr;canvas.height=innerHeight*dpr;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';ctx.setTransform(dpr,0,0,dpr,0,0);dots=Array.from({length:Math.min(85,Math.floor(innerWidth/15))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*1.5+.4}));}
+function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);const light=root.dataset.theme==='light';for(const p of dots){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>innerWidth)p.vx*=-1;if(p.y<0||p.y>innerHeight)p.vy*=-1;const dx=mouse.x-p.x,dy=mouse.y-p.y,dist=Math.hypot(dx,dy);if(dist<110){p.x-=dx*.0015;p.y-=dy*.0015}ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=light?'rgba(105,75,190,.42)':'rgba(167,139,250,.48)';ctx.fill()}requestAnimationFrame(draw)}resize();draw();addEventListener('resize',resize);addEventListener('pointermove',e=>{mouse.x=e.clientX;mouse.y=e.clientY;});
+// Custom cursor and subtle magnetic 3D tilt on pointer devices.
+const dot=$('.cursor-dot'),ring=$('.cursor-ring');let cx=0,cy=0,rx=0,ry=0;
+addEventListener('pointermove',e=>{cx=e.clientX;cy=e.clientY;mouse.x=cx;mouse.y=cy;dot.style.transform=`translate(${cx}px,${cy}px) translate(-50%,-50%)`;});
+function cursorLoop(){rx+=(cx-rx)*.16;ry+=(cy-ry)*.16;ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`;requestAnimationFrame(cursorLoop)}cursorLoop();
+$$('a,button,.tilt').forEach(el=>{el.addEventListener('pointerenter',()=>ring.classList.add('hover'));el.addEventListener('pointerleave',()=>ring.classList.remove('hover'));});
+if(matchMedia('(hover:hover) and (pointer:fine)').matches){$$('.tilt').forEach(el=>{el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`perspective(900px) rotateX(${-y*5}deg) rotateY(${x*5}deg) translateY(-2px)`;});el.addEventListener('pointerleave',()=>el.style.transform='');});$('#heroArt').addEventListener('pointermove',e=>{const r=e.currentTarget.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;e.currentTarget.style.transform=`perspective(1000px) rotateY(${x*8}deg) rotateX(${-y*8}deg)`;});$('#heroArt').addEventListener('pointerleave',e=>e.currentTarget.style.transform='');}
+// Reveal sections as they enter the viewport.
+$$('.section,.project-card,.skill-card').forEach(el=>el.classList.add('reveal'));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});$$('.reveal').forEach(el=>observer.observe(el));
+// Live public GitHub repositories; static featured cards remain available if the API is unavailable.
+async function loadRepos(){const grid=$('#repoGrid'),status=$('#repoStatus');try{const res=await fetch('https://api.github.com/users/abhisheknj37/repos?sort=updated&per_page=9');if(!res.ok)throw Error('GitHub API unavailable');const repos=await res.json();$('#repoCount').textContent=repos.length+'+';const filtered=repos.filter(r=>!r.fork).slice(0,6);grid.innerHTML=filtered.map(r=>`<a class="repo-card" href="${r.html_url}" target="_blank" rel="noreferrer"><h4>${escapeHTML(r.name)}</h4><p>${escapeHTML(r.description||'A public project by Abhishek N J.')}</p><div class="repo-card-foot"><span>✦ ${escapeHTML(r.language||'Code')}</span><span>★ ${r.stargazers_count} &nbsp; ↗</span></div></a>`).join('');status.textContent='Synced with GitHub · Recently updated';}catch(e){status.textContent='GitHub preview unavailable';grid.innerHTML='<div class="repo-loading">Visit <a class="text-link" href="https://github.com/abhisheknj37?tab=repositories">GitHub repositories ↗</a> to explore the latest work.</div>';}}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}loadRepos();
+// Contact form uses the visitor's mail app; no message is sent to a third-party server.
+$('#contactForm').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.currentTarget),subject=encodeURIComponent('Portfolio enquiry from '+f.get('name')),body=encodeURIComponent('Name: '+f.get('name')+'\nEmail: '+f.get('email')+'\n\n'+f.get('message'));$('#contactNote').textContent='Opening your email app…';location.href='mailto:abhisheknj37@gmail.com?subject='+subject+'&body='+body;});
