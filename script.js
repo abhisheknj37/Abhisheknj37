@@ -6,7 +6,6 @@ $('#themeToggle').textContent=root.dataset.theme==='dark'?'☼':'☾';
 $('#themeToggle').addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';localStorage.setItem('portfolio-theme',root.dataset.theme);$('#themeToggle').textContent=root.dataset.theme==='dark'?'☼':'☾';});
 $('#menuToggle').addEventListener('click',()=>$('#navLinks').classList.toggle('open'));
 $$('#navLinks a').forEach(a=>a.addEventListener('click',()=>$('#navLinks').classList.remove('open')));
-$('#resumeButton').addEventListener('click',()=>window.print());
 const roles=['intelligent applications.','AI-powered experiences.','useful things for the web.','ideas that solve problems.'];let role=0,pos=0,deleting=false;
 function type(){const el=$('#typedRole'),word=roles[role];pos+=deleting?-1:1;el.textContent=word.slice(0,pos);let delay=deleting?35:65;if(!deleting&&pos===word.length){deleting=true;delay=1450}else if(deleting&&pos===0){deleting=false;role=(role+1)%roles.length;delay=300}setTimeout(type,delay)}type();
 // Canvas particle field: light, responsive and pointer-reactive.
