@@ -1,33 +1,5 @@
 🌐 Portfolio Website: https://abhisheknj37-portfolio.vercel.app
 
-# About Me
-Hi, I'm Abhishek N J — a Computer Science student interested in software development, AI and machine learning.
-
-## Featured Projects
-
-### MediaVault — Media & Entertainment Data Warehouse
-A full-stack media analytics dashboard with role-based access, a Flask REST API, SQLite warehouse simulator and Hadoop ecosystem project artifacts.
-
-- **Live demo:** https://mediavault-dashboard-a-star-codes.vercel.app
-- **Source code:** https://github.com/abhisheknj37/Bigdata-Mini-project
-- **Stack:** React, Vite, Python, Flask, JWT, SQLite, Chart.js, Hadoop/Hive, Pig, MapReduce, Sqoop and Oozie.
-- **Highlights:** KPI analytics, content and genre performance, subscription insights, streaming QoE, CSV ingestion and an ETL pipeline.
-- **Architecture note:** The public deployment runs the SQLite demonstration mode. Hadoop cluster execution is not connected.
-
-### FitAI — AI-Powered Health & Fitness Platform
-A full-stack fitness platform with personalized dashboards, workout planning, nutrition and activity tracking, and health insights.
-- **Live demo:** https://fitai-platform.onrender.com
-- **Source code:** https://github.com/abhisheknj37/fitai-app
-
-## Socials
-- GitHub: https://github.com/abhisheknj37
-- LinkedIn: https://www.linkedin.com/in/abhishek-n-j-4918b7273/
-- Email: abhisheknj37@gmail.com
-
----
-
-<escape>🌐 Portfolio Website: https://abhisheknj37-portfolio.vercel.app</escape>
-
 # 💫 About Me:
 Hi 👋 I'm Abhishek<br>🎓 Computer Science Student<br>💻 Passionate about Software Development and Machine Learning<br>🚀 Currently working on Django and AI projects<br><br>🔭 Current Project<br>Neurosign: A Bidirectional Neural Network for Sign-to-Speech and Speech-to-Sign Translation<br><br>🛠 Skills<br>Python<br>Django<br>Machine Learning<br>HTML, CSS<br>Git & GitHub<br>📫 Contact<br>Email: abhisheknj37@gmail.com LinkedIn: [abhishek-n-j]<br><br>⚡ Fun Fact<br>I love building AI based projects and learning new technologies.# README.md
 
@@ -43,6 +15,15 @@ A full-stack health and fitness web application with a personalized dashboard an
 - **Source Code:** [abhisheknj37/fitai-app](https://github.com/abhisheknj37/fitai-app)
 
 > **Project note:** The AI chat, food-image analysis, and SOS flows are demo simulations, not clinical services or live emergency dispatch.
+
+### 🎬 MediaVault — Media & Entertainment Data Warehouse
+A full-stack media analytics dashboard with role-based access, a Flask REST API, a SQLite warehouse simulator and Hadoop ecosystem project artifacts.
+
+- **Live demo:** https://mediavault-dashboard-a-star-codes.vercel.app
+- **Source code:** https://github.com/abhisheknj37/Bigdata-Mini-project
+- **Stack:** React, Vite, Python, Flask, JWT, SQLite and Chart.js.
+- **Highlights:** Content and genre analytics, subscription insights, streaming QoE, CSV ingestion and an ETL pipeline.
+- **Architecture note:** The hosted demo runs in SQLite simulator mode. A live Hadoop cluster is not connected.
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/https://www.instagram.com/abhi__n07?igsh=enIyaDR1ZnZyMnR4) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/abhishek-n-j-4918b7273/) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:abhisheknj37@gmail.com) 
