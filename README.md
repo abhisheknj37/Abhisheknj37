@@ -8,7 +8,7 @@ Hi, I'm Abhishek N J — a Computer Science student interested in software devel
 ### MediaVault — Media & Entertainment Data Warehouse
 A full-stack media analytics dashboard with role-based access, a Flask REST API, SQLite warehouse simulator and Hadoop ecosystem project artifacts.
 
-- **Live demo:** Deployment pending Vercel's GitHub repository connection.
+- **Live demo:** https://mediavault-dashboard-a-star-codes.vercel.app
 - **Source code:** https://github.com/abhisheknj37/Bigdata-Mini-project
 - **Stack:** React, Vite, Python, Flask, JWT, SQLite, Chart.js, Hadoop/Hive, Pig, MapReduce, Sqoop and Oozie.
 - **Highlights:** KPI analytics, content and genre performance, subscription insights, streaming QoE, CSV ingestion and an ETL pipeline.
